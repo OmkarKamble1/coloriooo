@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  --scrollbar-width: 8px;
+  --scrollbar-height: 0px;
+  --scrollbar-border-radius: 10px;
+  --scrollbar-border-thickness: 0px;
+  --scrollbar-thumb-color: rgb(164, 173, 185);
+  --scrollbar-track-color: transparent;
+  --scrollbar-button-color: #ffffff;
+  position: relative;
+  min-height: 100vh;
+}
+body::-webkit-scrollbar {
+  width: var(--scrollbar-width, 20px);
+  height: var(--scrollbar-height, 20px);
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color, #3b82f6);
+  border: var(--scrollbar-border-thickness, 3px) solid
+    var(--scrollbar-border-color, rgb(255, 255, 255));
+  border-radius: var(--scrollbar-border-radius, 4px);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color, #a1a1aa);
+}
+
+body::-webkit-scrollbar-corner {
+  background: var(--scrollbar-corner-color, #ffffff);
+  border: var(--scrollbar-border-thickness, 3px) solid
+    var(--scrollbar-border-color, rgb(255, 255, 255));
+  border-radius: var(--scrollbar-border-radius, 4px);
+}
+body::-webkit-scrollbar-button:vertical:start:increment,
+#preview::-webkit-scrollbar-button:vertical:end:decrement,
+#preview::-webkit-scrollbar-button:horizontal:start:increment,
+#preview::-webkit-scrollbar-button:horizontal:end:decrement {
+  display: var(--show-double-buttons, none);
+}
+
+.copy {
+  animation: anim 170ms ease-out forwards;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateX(100%);
+  }
+}
